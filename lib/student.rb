@@ -50,7 +50,7 @@ class Student
   def save
 
     sql = <<-SQL
-      INSERT INTO students (name, grade) 
+      INSERT INTO students (name, grade)
       VALUES (?, ?)
     SQL
 
@@ -103,7 +103,7 @@ class Student
 
     DB[:conn].execute(sql).map do |row|
       self.new_from_db(row)
-    end 
+    end
 
   end
 
